@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-               xmlns:xs="http://www.w3.org/2001/XMLSchema"
-               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
-               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               jaxb:version="2.1">
-               
-  <jaxb:globalBindings>
-    <!-- Force all classes implements Serializable -->
-    <xjc:serializable uid="1" />
-  </jaxb:globalBindings>
-  
-  <jaxb:bindings schemaLocation="DSP8009.xsd" node="/xs:schema">
-    <jaxb:bindings node="//xs:element[@name='Collection']/xs:complexType/xs:sequence">
-      <jaxb:bindings node="xs:any[@namespace='##other']">
-        <jaxb:property name="anyOther"/>
-      </jaxb:bindings>
-      <jaxb:bindings node="xs:any[@namespace='##targetNamespace']">
-        <jaxb:property name="anyTargetNamespace"/>
-      </jaxb:bindings>
-    </jaxb:bindings>
-    
-    <jaxb:bindings node="//xs:group[@name='SampleElements']/xs:sequence/xs:element[@name='sample']/xs:complexType">
-      <jaxb:class name="SampleValue"/>
-    </jaxb:bindings>
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" jaxb:version="2.1">
 
-  </jaxb:bindings>
+	<jaxb:globalBindings>
+		<!-- Force all classes implements Serializable -->
+		<xjc:serializable uid="1" />
+	</jaxb:globalBindings>
+
+	<jaxb:bindings schemaLocation="DSP8009.xsd" node="/xs:schema">
+		<jaxb:bindings
+			node="//xs:element[@name='Collection']/xs:complexType/xs:sequence">
+			<jaxb:bindings node="xs:any[@namespace='##other']">
+				<jaxb:property name="anyOther" />
+			</jaxb:bindings>
+			<jaxb:bindings node="xs:any[@namespace='##targetNamespace']">
+				<jaxb:property name="anyTargetNamespace" />
+			</jaxb:bindings>
+		</jaxb:bindings>
+
+		<jaxb:bindings
+			node="//xs:group[@name='SampleElements']/xs:sequence/xs:element[@name='sample']/xs:complexType">
+			<jaxb:class name="SampleValue" />
+		</jaxb:bindings>
+
+	</jaxb:bindings>
 </jaxb:bindings>
